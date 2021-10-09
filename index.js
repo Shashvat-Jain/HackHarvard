@@ -13,11 +13,11 @@ app.get("/", (req, res) => {
 app.get("/dashboard", (req, res) => {
   res.render("dashboard.ejs");
 });
-// app.get("/", (req, res) => {
-//   res.render("index.ejs");
-// });
-// app.get("/", (req, res) => {
-//   res.render("index.ejs");
-// });
+app.get("/aman", (req, res) => {
+  res.render("index.ejs");
+});
+app.get("/", (req, res) => {
+  res.render("index.ejs");
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
