@@ -18,8 +18,5 @@ app.get("/dashboard", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login.ejs");
 });
-// app.get("/", (req, res) => {
-//   res.render("index.ejs");
-// });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
