@@ -137,12 +137,26 @@ body {
   width: 300px;
   margin: 50px 50px;
   height: 272px;
-  /* align-items: center; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
   margin-right: 10px;
   background: rgb(255, 255, 255);
   box-shadow: 13px 6px 14px rgb(216 216 216);
   border-radius: 5px;
   counter-increment: carousel-cell;
+  padding: 20px;
+}
+.carousel-cell img {
+  width: 90%;
+  height: 190px;
+  border-radius: 10px;
+}
+.carousel-cell h3 {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: sans-serif;
 }
 /* MAIN --------------- */
 .main-content {
@@ -188,4 +202,7 @@ body {
   margin: 5px 15px 20px 15px;
   border-radius: 15px;
   box-shadow: 2px 3px 10px rgba(165, 165, 165, 0.829);
+}
+.track {
+  margin: 50px 10px;
 }
