@@ -21,5 +21,8 @@ router.get('/track', (req, res) => {
     res.render('track');
 });
 
+router.get('/therapist', (req, res) => {
+    res.render('therapist');
+});
 
 module.exports = router;
