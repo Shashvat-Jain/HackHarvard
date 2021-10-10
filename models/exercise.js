@@ -6,20 +6,16 @@ const schema = mongoose.Schema({
         type: String,
         required: true
     },
-    username: {
+    description: {
         type: String,
         required: true
     },
-    phone: {
+    media: {
         type: String,
         required: true
-    },
-    completedExercises: [{
-        type: mongoose.Types.ObjectId,
-        ref: 'Exercise'
-    }]
+    }
 });
 
 schema.plugin(passport);
 
-module.exports = mongoose.model('User', schema);
+module.exports = mongoose.model('Exercise', schema);

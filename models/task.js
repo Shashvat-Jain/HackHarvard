@@ -6,20 +6,21 @@ const schema = mongoose.Schema({
         type: String,
         required: true
     },
-    username: {
+    description: {
         type: String,
         required: true
     },
-    phone: {
-        type: String,
-        required: true
-    },
-    completedExercises: [{
+    user: {
         type: mongoose.Types.ObjectId,
-        ref: 'Exercise'
-    }]
+        required: true
+    },
+    completed: {
+        type: Boolean,
+        default: false,
+        required: true
+    }
 });
 
 schema.plugin(passport);
 
-module.exports = mongoose.model('User', schema);
+module.exports = mongoose.model('Task', schema);

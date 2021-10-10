@@ -1,4 +1,6 @@
 const User = require('../models/user');
+const Task = require('../models/task');
+const Exercise = require('../models/exercise');
 
 module.exports.register = async (req, res) => {
     let user = await User.find({
@@ -53,4 +55,38 @@ module.exports.redirectIfNotAuth = (req, res, next) => {
     } else {
         next();
     }
+}
+
+module.exports.completeExercise = (req, res) => {
+    let exercise = Exercise.findOne({
+        _id: req.body.id
+    });
+
+    if ( !exercise ) {
+        res.redirect('/dashboard/exercises');
+        return;
+    }
+
+    req.user.completedExercises.push(exercise._id);
+    await req.user.save();
+    res.redirect('/dashboard/exercises');
+}
+
+module.exports.addTask = (req, res) => {
+    let task = new Task({
+        name: req.body.name,
+        description: req.body.description,
+        user: req.user._id
+    });
+    await task.save();
+    res.redirect('/dashboard/tasks');
+}
+
+module.exports.completeTask = (req, res) => {
+    await Task.findOneAndUpdate({
+        _id: req.body.id
+    }, {
+        completed: true
+    }).exec();
+    res.redirect('/dashboard/tasks');
 }
