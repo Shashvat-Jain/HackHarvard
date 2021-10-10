@@ -57,7 +57,7 @@ module.exports.redirectIfNotAuth = (req, res, next) => {
     }
 }
 
-module.exports.completeExercise = (req, res) => {
+module.exports.completeExercise = async (req, res) => {
     let exercise = Exercise.findOne({
         _id: req.body.id
     });
@@ -72,7 +72,7 @@ module.exports.completeExercise = (req, res) => {
     res.redirect('/dashboard/exercises');
 }
 
-module.exports.addTask = (req, res) => {
+module.exports.addTask = async (req, res) => {
     let task = new Task({
         name: req.body.name,
         description: req.body.description,
@@ -82,7 +82,7 @@ module.exports.addTask = (req, res) => {
     res.redirect('/dashboard/tasks');
 }
 
-module.exports.completeTask = (req, res) => {
+module.exports.completeTask = async (req, res) => {
     await Task.findOneAndUpdate({
         _id: req.body.id
     }, {
