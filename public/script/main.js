@@ -6,9 +6,11 @@ window.addEventListener("scroll", () => {
     text.style.marginTop = `${(window.scrollY / 400) * 500}px`;
   }
   if (window.scrollY >= 100) {
+    nav.style.top = "0px";
     nav.style.filter = "invert(1)";
     nav.style.background = "black";
   } else {
+    nav.style.top = "30px";
     nav.style.filter = "invert(0)";
     nav.style.background = "none";
   }

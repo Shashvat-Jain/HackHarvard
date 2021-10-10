@@ -5,7 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BT | landing</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+    />
+    <link rel="stylesheet" href="/fonts/ionicons.min.css" />
+    <link rel="stylesheet" href="/css/styles.min.css" />
   </head>
   <body>
     <%- include('./components/navigation') %>
@@ -21,34 +33,136 @@
         </span>
       </div>
       <div class="containor-screen">
-        <p class="heading-section">Feel Calm, Capable and Better everyday</p>
-        <p class="para-section">
-          <span class="tag">HappyMe</span> provides daily tasks to help you move
-          on and go on in your life
-        </p>
+        <img src="/images/pt-1.png" alt="" class="support-img" />
+        <div class="part-screen">
+          <p class="heading-section">Feel Calm, Capable and Better everyday</p>
+          <p class="para-section">
+            <span class="tag">HappyMe</span> provides daily tasks to help you
+            move on and go on in your life
+          </p>
+        </div>
       </div>
       <div class="containor-screen">
-        <p class="heading-section">
-          Find Your path towards a better and healthier life
-        </p>
-        <p class="para-section">
-          With
-          <span class="tag">HappyMe</span> track your fitness and mood. Exercise
-          daily, earn badges motivate yourself with daily quotes.
-        </p>
+        <div class="part-screen">
+          <p class="heading-section">
+            Find Your path towards a better and healthier life
+          </p>
+          <p class="para-section">
+            With
+            <span class="tag">HappyMe</span> track your fitness and mood.
+            Exercise daily, earn badges motivate yourself with daily quotes.
+          </p>
+        </div>
+        <img
+          src="/images/pt-2.png"
+          alt=""
+          class="support-img"
+          style="height: 323px"
+        />
       </div>
-      <div class="containor-screen"></div>
-      <div class="containor-screen"></div>
+      <div class="containor-screen">
+        <img src="/images/pt-3.png" alt="" class="support-img" />
+        <div class="part-screen">
+          <p class="heading-section">Enhance your productivity</p>
+          <p class="para-section">
+            With
+            <span class="tag">HappyMe</span> track your fitness and mood.
+            Exercise daily, earn badges motivate yourself with daily quotes.
+          </p>
+        </div>
+      </div>
+      <div class="containor-screen contact-field">
+        <form action="" class="contact">
+          <h1 class="form__title">Connect Us</h1>
+          <div class="form__message form__message--error"></div>
+          <div class="form__input-group">
+            <input
+              type="text"
+              id="signupUsername"
+              class="form__input"
+              autofocus
+              placeholder="Username"
+            />
+            <div class="form__input-error-message"></div>
+          </div>
+          <div class="form__input-group">
+            <input
+              type="text"
+              class="form__input"
+              autofocus
+              placeholder="Email Address"
+            />
+            <div class="form__input-error-message"></div>
+          </div>
+          <div class="form__input-group">
+            <input
+              type="password"
+              class="form__input"
+              autofocus
+              placeholder="Password"
+            />
+            <div class="form__input-error-message"></div>
+          </div>
+          <div class="form__input-group">
+            <input
+              type="password"
+              class="form__input"
+              autofocus
+              placeholder="Confirm password"
+            />
+            <div class="form__input-error-message"></div>
+          </div>
+          <button class="form__button" type="submit">Submit</button>
+        </form>
+        <div class="contact-img"></div>
+      </div>
     </div>
-    <%- include('./components/footer') %>
-    <div class="copyright">
-      <!-- <img src="" alt="" class="logo-social" />
-      <img src="" alt="" class="logo-social" />
-      <img src="" alt="" class="logo-social" />
-      <img src="" alt="" class="logo-social" />
-      <img src="" alt="" class="logo-social" /> -->
-      <p>Copyright © 2021 BT. All rights reserved</p>
-    </div>
+    <!-- <%- include('./components/footer') %> -->
+
+    <!-- ----------------------------------------------------------- -->
+    <footer
+      class="footer-clean"
+      style="color: rgb(255, 255, 255); background: rgb(0, 0, 0)"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-4 col-md-3 item">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Web design</a></li>
+              <li><a href="#">Development</a></li>
+              <li><a href="#">Hosting</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-md-3 item">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Legacy</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4 col-md-3 item">
+            <h3>Careers</h3>
+            <ul>
+              <li><a href="#">Job openings</a></li>
+              <li><a href="#">Employee success</a></li>
+              <li><a href="#">Benefits</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 item social">
+            <a href="#"><i class="icon ion-social-facebook"></i></a
+            ><a href="#"><i class="icon ion-social-twitter"></i></a
+            ><a href="#"><i class="icon ion-social-snapchat"></i></a
+            ><a href="#"><i class="icon ion-social-instagram"></i></a>
+            <p class="copyright">Copyright © 2021 BT. All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ----------------------------------------------------------- -->
   </body>
-  <script src="./script/main.js"></script>
+  <script src="/script/main.js"></script>
+  <!-- BOOTSTRAP -->
+  <script src="/bootstrap/js/bootstrap.min.js"></script>
 </html>
