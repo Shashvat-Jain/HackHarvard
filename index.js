@@ -18,5 +18,17 @@ app.get("/dashboard", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login.ejs");
 });
+app.get("/therapist", (req, res) => {
+  res.render("therapist.ejs");
+});
+app.get("/tasks", (req, res) => {
+  res.render("todo.ejs");
+});
+app.get("/sleepzone", (req, res) => {
+  res.render("sleepzone.ejs");
+});
+app.get("/logout", (req, res) => {
+  res.render("login.ejs");
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

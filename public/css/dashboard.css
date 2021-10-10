@@ -130,7 +130,20 @@ body {
   font-weight: 900;
   cursor: pointer;
 }
-
+.carousel {
+  height: 350px;
+}
+.carousel-cell {
+  width: 300px;
+  margin: 50px 50px;
+  height: 272px;
+  /* align-items: center; */
+  margin-right: 10px;
+  background: rgb(255, 255, 255);
+  box-shadow: 13px 6px 14px rgb(216 216 216);
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
 /* MAIN --------------- */
 .main-content {
   width: 70%;
