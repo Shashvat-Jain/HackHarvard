@@ -21,8 +21,11 @@ app.get("/login", (req, res) => {
 app.get("/therapist", (req, res) => {
   res.render("therapist.ejs");
 });
-app.get("/tasks", (req, res) => {
+app.get("/todo", (req, res) => {
   res.render("todo.ejs");
+});
+app.get("/track", (req, res) => {
+  res.render("track.ejs");
 });
 app.get("/sleepzone", (req, res) => {
   res.render("sleepzone.ejs");
@@ -35,6 +38,12 @@ app.get("/profile", (req, res) => {
 });
 app.get("/task", (req, res) => {
   res.render("task.ejs");
+});
+app.get("/setting", (req, res) => {
+  res.render("setting.ejs");
+});
+app.get("/chat", (req, res) => {
+  res.render("chat.ejs");
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
