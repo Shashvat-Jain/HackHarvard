@@ -30,5 +30,11 @@ app.get("/sleepzone", (req, res) => {
 app.get("/logout", (req, res) => {
   res.render("login.ejs");
 });
+app.get("/profile", (req, res) => {
+  res.render("profile.ejs");
+});
+app.get("/task", (req, res) => {
+  res.render("task.ejs");
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
